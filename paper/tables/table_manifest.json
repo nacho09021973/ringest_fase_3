@@ -1,0 +1,100 @@
+[
+  {
+    "path": "/home/ignac/ringest_fase_2/paper/tables/t66_kerr_audit_table.tex",
+    "rows": 19,
+    "columns": [
+      "event",
+      "f_obs_hz",
+      "f_kerr_hz",
+      "gamma_obs_hz",
+      "gamma_kerr_hz",
+      "residual_f",
+      "residual_gamma",
+      "max_abs_residual",
+      "verdict_kerr"
+    ],
+    "caption": "T6.6 Kerr audit rows used in Phase 2."
+  },
+  {
+    "path": "/home/ignac/ringest_fase_2/paper/tables/t82a_kerr_audit_table.tex",
+    "rows": 10,
+    "columns": [
+      "event",
+      "f_obs_hz",
+      "f_kerr_hz",
+      "gamma_obs_hz",
+      "gamma_kerr_hz",
+      "residual_f",
+      "residual_gamma",
+      "max_abs_residual",
+      "verdict_kerr"
+    ],
+    "caption": "T8.2a Kerr audit rows used in Phase 2."
+  },
+  {
+    "path": "/home/ignac/ringest_fase_2/paper/tables/t9_population_tail_stats_table.tex",
+    "rows": 29,
+    "columns": [
+      "cohort",
+      "event",
+      "verdict_kerr",
+      "max_abs_residual",
+      "network_matched_filter_snr",
+      "population_tail_rank",
+      "population_tail_rank_combined",
+      "population_tail_top_tertile",
+      "population_tail_top_tertile_combined"
+    ],
+    "caption": "Population-tail statistics table derived from T9 inputs."
+  },
+  {
+    "path": "/home/ignac/ringest_fase_2/paper/tables/t10_snr_residual_audit_table.tex",
+    "rows": 29,
+    "columns": [
+      "cohort",
+      "event",
+      "verdict_kerr",
+      "max_abs_residual",
+      "network_matched_filter_snr",
+      "snr_rank_cohort_desc",
+      "residual_rank_cohort_desc",
+      "population_tail_rank",
+      "audit_flags"
+    ],
+    "caption": "SNR-residual audit rows used for T10."
+  },
+  {
+    "path": "/home/ignac/ringest_fase_2/paper/tables/t10_overlap_decomposition_table.tex",
+    "rows": 6,
+    "columns": [
+      "event",
+      "SNR",
+      "max_abs_residual_t66",
+      "max_abs_residual_t82a",
+      "delta_max_abs_residual",
+      "shapley_OBS_SHIFT",
+      "shapley_OBS_SIGMA_CHANGE",
+      "shapley_KERR_PREDICTION_CHANGE",
+      "shapley_KERR_SIGMA_CHANGE",
+      "dominant_driver",
+      "lost_high_tail_in_t82a"
+    ],
+    "caption": "Six-event overlap decomposition used for T10.1."
+  },
+  {
+    "path": "/home/ignac/ringest_fase_2/paper/tables/source_audit_critical_events_table.tex",
+    "rows": 3,
+    "columns": [
+      "event",
+      "max_abs_residual_t66",
+      "residual_f_t66",
+      "residual_gamma_t66",
+      "verdict_t66",
+      "max_abs_residual_t82a",
+      "residual_f_t82a",
+      "residual_gamma_t82a",
+      "verdict_t82a"
+    ],
+    "caption": "Critical-event source audit comparison for T6.6 and T8.2a."
+  }
+]

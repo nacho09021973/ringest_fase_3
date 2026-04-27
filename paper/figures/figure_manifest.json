@@ -1,0 +1,14 @@
+{
+  "t10_snr_residual_by_cohort": [
+    "/home/ignac/ringest_fase_2/paper/figures/t10_snr_residual_by_cohort.png",
+    "/home/ignac/ringest_fase_2/paper/figures/t10_snr_residual_by_cohort.pdf"
+  ],
+  "t10_1_overlap_shapley": [
+    "/home/ignac/ringest_fase_2/paper/figures/t10_1_overlap_shapley.png",
+    "/home/ignac/ringest_fase_2/paper/figures/t10_1_overlap_shapley.pdf"
+  ],
+  "source_audit_critical_events": [
+    "/home/ignac/ringest_fase_2/paper/figures/source_audit_critical_events.png",
+    "/home/ignac/ringest_fase_2/paper/figures/source_audit_critical_events.pdf"
+  ]
+}
