@@ -19,14 +19,13 @@ def load_csv(path: Path) -> pd.DataFrame:
     return pd.read_csv(path)
 
 
-def write_latex(df: pd.DataFrame, path: Path, caption: str, label: str) -> None:
+def write_latex(df: pd.DataFrame, path: Path) -> None:
     latex = df.to_latex(
         index=False,
         escape=True,
         float_format=lambda x: f"{x:.6g}",
-        caption=caption,
-        label=label,
         longtable=False,
+        na_rep="",
     )
     path.write_text(latex)
 
@@ -179,7 +178,7 @@ def main() -> int:
     manifest = []
     for filename, df, caption, label in tables:
         path = out_dir / filename
-        write_latex(df, path, caption, label)
+        write_latex(df, path)
         manifest.append(
             {
                 "path": str(path),
