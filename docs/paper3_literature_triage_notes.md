@@ -28,11 +28,13 @@ No autoriza todavía la creación de YAML B ni la transcripción de valores num�
 |---|---|---|---|
 | LVK/TGR GWTC-2/3 | 19 eventos baseline A | B_param | No empezar aquí; requiere decisión de transformación |
 | Isi et al. 2019 | GW150914 | B_param_focal_GW150914 / needs_more_provenance | Reclasificada tras lectura primaria; ver `paper3_source_B_abs_isi2019_reading.md` |
-| Capano et al. 2023 | GW190521 | B_abs provisional | Segundo candidato absoluto |
+| Capano et al. 2023 | GW190521 | B_abs_agnostic_labels / ready_for_yaml_design | Reclasificada tras lectura primaria; ver `paper3_source_B_abs_capano2023_reading.md` |
 | Giesler et al. 2019 | NR / GW150914-like | No_tabular | Discusión sobre sobretonos y tiempo de inicio |
 | Finch & Moore 2022 | GW150914 | No_tabular provisional | Discusión de estabilidad/sensibilidad |
 
 Nota tras lectura primaria de Isi et al. 2019 ("Testing the no-hair theorem with GW150914", *Phys. Rev. Lett.* **123**, 111102, 2019): la fuente primaria **no** confirma una tabla absoluta `f_hz/tau_ms` para el modo `220`. Sólo aporta cantidades parametrizadas (`delta_f1`, `delta_tau1` referidas al sobretono `n=1`) más masa/spin remanente bajo hipótesis Kerr. Por eso baja a `B_param_focal_GW150914 / needs_more_provenance`. Detalles en `docs/paper3_source_B_abs_isi2019_reading.md`.
+
+Nota tras lectura primaria de Capano et al. 2023 ("Multimode Quasinormal Spectrum from a Perturbed Black Hole", *Phys. Rev. Lett.* **131**, 221402, 2023; arXiv:2105.05238): la fuente primaria **sí** proporciona valores absolutos de `f` y `tau` para GW190521, pero a través de un análisis agnóstico en dos rangos de frecuencia (`range A` y `range B`) con identificación modal posterior como `(2,2,0)` y `(3,3,0)`. Los intervalos son asimétricos. Por eso pasa a `B_abs_agnostic_labels / ready_for_yaml_design`. Detalles en `docs/paper3_source_B_abs_capano2023_reading.md`.
 
 ## Decisión práctica
 

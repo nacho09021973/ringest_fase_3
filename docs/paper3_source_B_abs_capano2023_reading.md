@@ -57,3 +57,24 @@ Tras leer la fuente primaria, decidir:
 - `accept_B_abs_agnostic_labels`: crear YAML con etiquetas agnósticas si no hay modo Kerr inequívoco.
 - `needs_more_provenance`: falta tabla/data release o convención.
 - `reject_tabular`: no sirve como fuente tabular comparable.
+
+## Lectura primaria — decisión
+
+- Resultado: `accept_B_abs_agnostic_labels`.
+- Evento: GW190521.
+- Motivo: la fuente primaria proporciona valores absolutos de frecuencia y damping time para dos resonancias agnósticas, con identificación modal posterior compatible con `(2,2,0)` y `(3,3,0)`.
+- Valores agnósticos verificados a `tref + 6 ms`:
+  - Range A (modo primario): `f = 63 +2/-2 Hz`, `tau = 26 +8/-6 ms`.
+  - Range B (modo secundario): `f = 98 +89/-7 Hz`, `tau = 40 +50/-30 ms`.
+- Modelo Kerr `(220)+(330)`: Bayes factor `56 ± 1` a `tref + 6 ms` frente al modelo de un solo modo fundamental.
+- Identificación modal: el modo secundario se interpreta como `(3,3,0)`, pero la entrada en YAML debe preservar la etiqueta agnóstica original (`range A` / `range B`) además de la identificación posterior.
+- Los intervalos son asimétricos (`+plus/-minus`); no se deben convertir a sigma simétrica sin una regla explícita documentada.
+- Resultados paramétricos adicionales en el material suplementario:
+  - `delta_f330 = -0.008 +0.081/-0.090`.
+  - `delta_tau330 = 0.6 +1.9/-1.2`.
+  - `f330 (1 + delta_f330) = 96.5 +8.5/-8.7 Hz`.
+- Otros parámetros físicos reportados (no transcribir aún a YAML, dejar como referencia bibliográfica):
+  - `(1+z) Mf = 330 +30/-40 Msun` (masa final redshifted).
+  - `chi_f = 0.86 +0.06/-0.11`.
+  - `A330/A220 = 0.2 +0.2/-0.1`.
+- Estado final: `ready_for_yaml_design`. No se crea YAML todavía: antes hay que diseñar el esquema que preserve `agnostic_range`, etiqueta `mode_label` agnóstica, identificación modal posterior, tiempo de análisis (`analysis_time_offset_ms`) e intervalos asimétricos.
