@@ -261,3 +261,9 @@ Lectura física sobria: el input actual permite una línea base institucional A 
 - Fuente YAML: `data/phase1_data/qnm_events_literature.yml`.
 - Número de filas: 19 (una por evento, modo `(2,2,0)`).
 - Alcance: este artefacto cubre baseline A (LVK/TGR GWTC-2). No es la matriz de heterogeneidad A/B/C/D/E; las fuentes B/C/D/E aún no están codificadas en el YAML canónico.
+
+### Auditoría de incertidumbres Kerr (baseline A)
+
+En la auditoría posterior del CSV, las 19 filas tienen `sigma_M_final_Msun` y `sigma_chi_final` presentes; por tanto el baseline A actual es usable para propagación completa de incertidumbre Kerr dentro de esta fuente.
+
+Esto no implica heterogeneidad A/B/C/D/E: sigue habiendo una sola familia de fuente QNM en el YAML actual.
