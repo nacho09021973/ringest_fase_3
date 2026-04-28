@@ -1,5 +1,11 @@
 # RINGEST Fase 3 — Paper 3: reporting heterogeneity in QNM observables
 
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](#reproducibilidad)
+
+Zenodo DOI for Phase 3: pending release.
+
+![RINGEST Phase 3 overview](docs/social_preview.png)
+
 ## Estado
 
 Workspace de Fase 3 para Paper 3.
