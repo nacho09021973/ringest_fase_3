@@ -68,6 +68,7 @@ Tras leer la fuente primaria, decidir:
   - Range B (modo secundario): `f = 98 +89/-7 Hz`, `tau = 40 +50/-30 ms`.
 - Modelo Kerr `(220)+(330)`: Bayes factor `56 ± 1` a `tref + 6 ms` frente al modelo de un solo modo fundamental.
 - Identificación modal: el modo secundario se interpreta como `(3,3,0)`, pero la entrada en YAML debe preservar la etiqueta agnóstica original (`range A` / `range B`) además de la identificación posterior.
+- Cautela interpretativa externa: Siegel et al. 2023 discute una interpretación alternativa del subdominant feature como `320` y posiblemente relacionada con precesión. Esto no cambia el YAML Capano 2023, pero refuerza que `agnostic_range` y `kerr_identification = 330_candidate` deben conservarse como identificación posterior, no como verdad modal cerrada.
 - Los intervalos son asimétricos (`+plus/-minus`); no se deben convertir a sigma simétrica sin una regla explícita documentada.
 - Resultados paramétricos adicionales en el material suplementario:
   - `delta_f330 = -0.008 +0.081/-0.090`.
