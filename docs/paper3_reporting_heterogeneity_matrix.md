@@ -295,3 +295,23 @@ Esto no implica heterogeneidad A/B/C/D/E: sigue habiendo una sola familia de fue
   - convenciones (marco source/detector, simetría de incertidumbres, parametrización del damping `tau` / `gamma` / `omega_I` / `Q`, valores absolutos vs desviaciones fraccionales).
 - No se transcribirá ningún valor hasta resolver esos puntos.
 - El solape A/B se considera desconocido hasta construir una tabla de `event_id` desde la fuente pyRing.
+
+## Primer caso trazable de heterogeneidad
+
+- Evento: GW190521.
+- Comparación:
+  - baseline A / LVK-TGR GWTC-2, modo 220.
+  - Capano et al. 2023, range A / 220_candidate.
+- Artefactos:
+  - `scripts/paper3/compare_gw190521_a_vs_capano2023.py`
+  - `outputs/paper3/gw190521_a_vs_capano2023_comparison.csv`
+  - `outputs/paper3/gw190521_a_vs_capano2023_comparison.md`
+  - `docs/paper3_case_study_GW190521_A_vs_Capano2023.md`
+- Resultado:
+  - frecuencia: intervalos solapan (`overlap_f_interval = True`).
+  - damping time: intervalos no solapan (`overlap_tau_interval = False`).
+- Interpretación:
+  - evidencia documental de reporting heterogeneity en `tau_ms` para GW190521.
+  - no es todavía test físico ni tensión Kerr.
+  - no es conclusión de cohorte.
+  - no incluye el modo 330 porque baseline A no tiene entrada 330.
