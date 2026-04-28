@@ -253,3 +253,11 @@ Lectura física sobria: el input actual permite una línea base institucional A 
 - No permite todavía medir reporting heterogeneity entre fuentes.
 - Para Paper 3 hace falta añadir o tabular fuentes adicionales B/C/D/E con provenance trazable.
 - Por tanto, el resultado actual es diagnóstico de cobertura, no aún análisis de heterogeneidad.
+
+## Artefacto baseline A
+
+- Script usado: `scripts/paper3/build_baseline_a_coverage.py`.
+- CSV producido: `outputs/paper3/baseline_a_coverage.csv`.
+- Fuente YAML: `data/phase1_data/qnm_events_literature.yml`.
+- Número de filas: 19 (una por evento, modo `(2,2,0)`).
+- Alcance: este artefacto cubre baseline A (LVK/TGR GWTC-2). No es la matriz de heterogeneidad A/B/C/D/E; las fuentes B/C/D/E aún no están codificadas en el YAML canónico.
