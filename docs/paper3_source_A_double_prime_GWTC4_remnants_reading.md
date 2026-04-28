@@ -36,6 +36,12 @@ Contiene resultados pSEOBNRV5PHM para eventos seleccionados:
 - `chi_f`
 - valores IMR-GR entre paréntesis.
 
+## Table 1 como matriz de cobertura
+
+Table 1 se usará como matriz de cobertura metodológica: indica qué eventos entran en PYRING, pSEOBNR, QNMRF y búsquedas de ecos.
+
+No se usará como tabla de valores QNM finales. Para valores `delta_f220`, `delta_tau220`, `f220` y `tau220`, la referencia tabular relevante es Table 3.
+
 ## Decisión
 
 Esta fuente no debe entrar como B externa, porque es LVK.
