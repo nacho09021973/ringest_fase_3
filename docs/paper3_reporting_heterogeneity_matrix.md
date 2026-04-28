@@ -325,3 +325,27 @@ Esto no implica heterogeneidad A/B/C/D/E: sigue habiendo una sola familia de fue
   - no es todavía test físico ni tensión Kerr.
   - no es conclusión de cohorte.
   - no incluye el modo 330 porque baseline A no tiene entrada 330.
+
+## Segundo caso trazable de heterogeneidad
+
+- Evento: GW190910_112807.
+- Comparación:
+  - baseline A / LVK-TGR GWTC-2, modo 220.
+  - GWTC-4.0 Remnants Table 3 / pSEOBNRV5PHM, modo 220.
+- Clasificación:
+  - `A_double_prime_LVK_O4a_remnants / B_param_with_reconstructed_abs`.
+- Artefactos:
+  - `data/phase1_data/qnm_events_gwtc4_remnants_table3.yml`
+  - `scripts/paper3/compare_gw190910_a_vs_gwtc4_table3.py`
+  - `outputs/paper3/gw190910_a_vs_gwtc4_table3_comparison.csv`
+  - `outputs/paper3/gw190910_a_vs_gwtc4_table3_comparison.md`
+  - `docs/paper3_case_study_GW190910_A_vs_GWTC4_table3.md`
+- Resultado:
+  - frecuencia: intervalos solapan.
+  - damping time: intervalos no solapan.
+- Interpretación:
+  - evidencia documental de reporting heterogeneity en `tau_ms` para GW190910_112807.
+  - no es test físico.
+  - no es tensión Kerr.
+  - no es fuente externa independiente.
+  - no es conclusión de cohorte.
