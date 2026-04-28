@@ -45,3 +45,11 @@ Pero no se debe ejecutar código temporal no versionado para generar resultados 
 
 Excepción permitida:
 - comandos cortos de inspección manual que no produzcan artefactos científicos persistentes, por ejemplo `grep`, `sed -n`, `python -c` para contar campos, o `git diff`.
+
+## Política mínima sobre PDFs bibliográficos
+
+- Los informes internos de triage pueden versionarse si son ligeros y forman parte del razonamiento del proyecto.
+- Los papers primarios publicados no se versionan por defecto.
+- Para papers primarios se prefiere registrar DOI, arXiv, referencia bibliográfica y notas de lectura en Markdown.
+- Un PDF primario solo debe versionarse si existe una razón explícita: versión difícil de recuperar, material suplementario crítico, anotaciones locales indispensables o riesgo de pérdida de provenance.
+- Si un PDF primario queda en `docs/` como ayuda local, debe tratarse como artefacto local no canónico hasta decisión explícita.
