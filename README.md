@@ -1,121 +1,84 @@
-# ringest_fase_2
+# RINGEST Fase 3 — Paper 3: reporting heterogeneity in QNM observables
 
-[![Phase 1 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19813389.svg)](https://doi.org/10.5281/zenodo.19813389)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](#reproducibility)
+## Estado
 
-This is Phase 2 of the RINGEST series. Phase 1 dataset is required as input (Zenodo DOI `10.5281/zenodo.19813389`).
+Workspace de Fase 3 para Paper 3.
 
-Phase 2 is a minimal reproducibility repository for the Kerr-audit material used in Paper 2. It turns verified Phase 2 CSV/JSON audit products into manuscript-ready tables, figures, and a paper skeleton.
+Este repositorio queda congelado como base documental y reproducible del análisis de heterogeneidad de reporting en observables QNM/ringdown.
 
-![T10 SNR-residual diagnostic](paper/figures/t10_snr_residual_by_cohort.png)
+## Pregunta
 
-## At a Glance
+¿Hasta qué punto diferencias aparentes entre observables QNM publicados pueden explicarse por heterogeneidad de reporting antes de interpretarse como tensión física?
 
-- Input base from Phase 1: `data/phase1_data/` and `data/phase1_outputs/`
-- Real audit inputs read from: `../RINGEST/runs_sync/active/`
-- Table builder: `scripts/make_tables.py`
-- Figure builder: `scripts/make_figures.py`
-- Paper skeleton: `paper/paper_gamma_2.tex`
+## Resultado principal
 
-Generated artifacts:
+Fase 3 documenta dos casos trazables donde `f_hz` solapa entre fuentes, pero `tau_ms` no solapa:
 
-- `paper/tables/t9_population_tail_stats_table.tex`
-- `paper/tables/t10_snr_residual_audit_table.tex`
-- `paper/tables/t10_overlap_decomposition_table.tex`
-- `paper/tables/source_audit_critical_events_table.tex`
-- `paper/figures/t10_snr_residual_by_cohort.pdf`
-- `paper/figures/t10_1_overlap_shapley.pdf`
-- `paper/figures/source_audit_critical_events.pdf`
+| Evento | Comparación | f_hz | tau_ms |
+|---|---|---|---|
+| GW190521 | baseline A vs Capano 2023 | solapa | no solapa |
+| GW190910_112807 | baseline A vs GWTC-4.0 Table 3 | solapa | no solapa |
 
-## Scope
+## Interpretación permitida
 
-This repository covers the reproducible audit layer for Paper 2:
+- `tau_ms` parece más frágil que `f_hz` frente a diferencias de reporting en los casos auditados.
+- Una discrepancia aislada en `tau_ms` puede ser reporting heterogeneity.
+- El resultado justifica separar heterogeneidad documental/metodológica de tensión física.
+- Paper 4 debe partir de esta cautela si busca candidatos discovery.
 
-- T9.2 population-tail NULL audit inputs and tables
-- T10 SNR-residual cohort diagnostic
-- T10.1 six-event paired Shapley decomposition
-- source-audit comparison for the three critical events
+## Qué no afirma este repositorio
 
-It does not re-run the original exploratory pipelines under `RINGEST/runs_sync/active`; those are treated as fixed read-only inputs here.
+Este repositorio no afirma:
 
-## Reproducibility contents
+- discovery física;
+- tensión Kerr;
+- evidencia de nueva física;
+- conclusión poblacional;
+- significancia estadística global;
+- que `tau_ms` sea siempre menos fiable que `f_hz`;
+- que los dos casos basten para una afirmación universal.
 
-This repository is the reproducibility package for RINGEST Paper 2.
+## Artefactos principales
 
-Main components:
+Documentos:
 
-- `paper/paper_gamma_2.tex` - Paper 2 manuscript draft.
-- `scripts/paper2/` - versioned analysis producers for the Paper 2 statistical checks.
-- `runs_sync/verified/` - verified analysis outputs used by the manuscript.
-- `runs_sync/verified/*/RERUN_PROVENANCE.md` - checksums and provenance for each verified run.
+- `docs/paper3_reporting_heterogeneity_matrix.md`
+- `docs/paper3_milestone_02_two_case_reporting_heterogeneity.md`
+- `docs/paper3_outline.md`
 
-The downstream statistical analyses were performed from frozen input tables using version-controlled scripts. External catalog metadata were treated as frozen inputs before downstream analyses.
+Comparadores ligeros, si existen:
 
-These artefacts support reproducibility of the tabulated analyses. They are not, by themselves, evidence for new physics.
+- `outputs/paper3/gw190521_a_vs_capano2023_comparison.csv`
+- `outputs/paper3/gw190910_a_vs_gwtc4_table3_comparison.csv`
+- `outputs/paper3/baseline_a_coverage.csv`
 
-## Paper 2 analysis scripts
+Fuentes de entrada, si existen:
 
-The Paper 2 analysis producers are:
+- `data/phase1_data/qnm_events_capano2023.yml`
+- `data/phase1_data/qnm_events_gwtc4_remnants_table3.yml`
 
-| Script | Purpose |
-|---|---|
-| `scripts/paper2/01_build_population_metadata.py` | Build the population metadata table from frozen/external catalog metadata inputs. |
-| `scripts/paper2/02_build_population_tail_statistics.py` | Compute the T9 population-tail statistics. |
-| `scripts/paper2/03_audit_snr_residuals.py` | Audit SNR dependence of Kerr residuals. |
-| `scripts/paper2/04_patch_snr_residual_interpretation.py` | Apply documented interpretation text for the SNR residual summary. |
-| `scripts/paper2/05_decompose_snr_overlap.py` | Decompose SNR-overlap residual changes into analysis groups. |
-| `scripts/paper2/06_patch_overlap_interpretation.py` | Apply documented interpretation text for the overlap-decomposition summary. |
+## Relación con Fase 4
 
-## Verified outputs
+Fase 4 debe empezar como filtro de discovery condicionado por Fase 3.
 
-Verified outputs are stored under:
+La pregunta natural de Fase 4 es:
 
-- `runs_sync/verified/kerr_population_tail_t9_verified_2026-04-27/`
-- `runs_sync/verified/kerr_snr_systematics_t10_verified_2026-04-27/`
+> Después de controlar heterogeneidad de reporting, evolución de pipeline, parametrización, incertidumbre Kerr y selección de fuente, ¿queda algún patrón físico robusto?
 
-Each directory contains a `RERUN_PROVENANCE.md` file with checksums.
+## Reglas de conservación
 
-## Reproducibility
+Este workspace queda congelado como Fase 3.
 
-This repository assumes the real Kerr-audit inputs are available under:
+No debe usarse para:
 
-`../RINGEST/runs_sync/active`
+- recalcular Paper 4;
+- añadir candidatos discovery;
+- reintroducir ESPRIT;
+- modificar outputs históricos;
+- inflar conclusiones con N pequeño.
 
-From the repository root:
+## Reproducibilidad
 
-```bash
-python3 scripts/make_tables.py
-python3 scripts/make_figures.py
-```
+El repositorio conserva documentación, comparadores ligeros y provenance textual suficiente para reconstruir la narrativa de Paper 3.
 
-Outputs are written to:
-
-- `paper/tables/`
-- `paper/figures/`
-
-Full details are in [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
-
-## Repository Layout
-
-```text
-ringest_fase_2/
-├── data/
-├── paper/
-│   ├── figures/
-│   ├── tables/
-│   ├── paper_gamma_2.tex
-│   └── refs.bib
-├── runs_sync/
-│   └── verified/
-├── scripts/
-│   └── paper2/
-├── README.md
-└── REPRODUCIBILITY.md
-```
-
-## Phase 1 Dependency
-
-Phase 1 remains the canonical literature-based dataset package:
-
-- Repository: `https://github.com/nacho09021973/ringest_fase_1`
-- Zenodo DOI: `10.5281/zenodo.19813389`
+Los outputs pesados, si los hubiera, no forman parte del contrato principal de este README salvo que estén explícitamente versionados.
