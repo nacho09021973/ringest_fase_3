@@ -28,3 +28,20 @@ No tocar ~/ringest_fase_1.
 No empujar cambios de fase 3 hacia fase 2.
 No reintroducir la antigua rama ESPRIT.
 No correr GPU salvo que una pregunta física concreta lo exija.
+
+## Regla sobre scripts efímeros
+
+No se deben crear scripts efímeros o ad hoc para producir resultados que luego queden en el análisis sin provenance.
+
+Todo script que produzca una tabla, figura, métrica, transformación de datos o resultado usado en el proyecto debe quedar como artefacto permanente del repo mientras sea relevante.
+
+Un script permanente puede después:
+- modificarse;
+- sustituirse;
+- borrarse con commit explícito;
+- moverse a `_archive/`, `legacy/` o equivalente.
+
+Pero no se debe ejecutar código temporal no versionado para generar resultados científicos que después se conserven.
+
+Excepción permitida:
+- comandos cortos de inspección manual que no produzcan artefactos científicos persistentes, por ejemplo `grep`, `sed -n`, `python -c` para contar campos, o `git diff`.
