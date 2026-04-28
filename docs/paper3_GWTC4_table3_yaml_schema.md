@@ -106,10 +106,14 @@ events:
 - No convertir intervalos asimétricos a sigma simétrica en el YAML.
 - No mezclar estos eventos dentro del YAML baseline A.
 - No tratar esta fuente como B externa independiente.
+- Preservar siempre los valores `delta_*` y los valores reconstruidos `f/tau`.
 - Preservar siempre los valores IMR-GR entre paréntesis como campos separados.
 - Preservar el pipeline `pSEOBNRV5PHM`.
 - Usar `f220_hz` y `tau220_ms` como valores reconstruidos de Table 3, no como baseline A.
 - Usar `delta_f220` y `delta_tau220` como cantidades paramétricas primarias de esta fuente.
+- No calcular residual A vs A_double_prime dentro del YAML.
+- No afirmar tensión física con Kerr a partir de este esquema.
+- No comparar contra baseline A sin comparador permanente que trate intervalos asimétricos.
 
 ## Primer caso recomendado
 
@@ -117,7 +121,25 @@ El primer evento para poblar y comparar, si se crea el YAML después, será:
 
 `GW190910_112807`
 
-Motivo: frecuencia `f220` relativamente estable entre pSEOBNRV5PHM e IMR-GR, pero damping time `tau220` desplazado hacia valores mayores en pSEOBNRV5PHM.
+Motivo:
+
+- pertenece al baseline A;
+- aparece en Table 3;
+- `f220` parece estable frente a IMR-GR;
+- `tau220` aparece desplazado hacia valores mayores;
+- el paper primario indica que los intervalos 90% de damping time son marginalmente incompatibles.
+
+## Decisión pendiente
+
+Antes de crear el YAML real, decidir si se incluye:
+
+1. solo `GW190910_112807` como caso mínimo;
+2. todos los eventos de Table 3 que pertenecen al baseline A;
+3. todos los eventos de Table 3.
+
+Recomendación provisional:
+
+crear primero un YAML mínimo con `GW190910_112807`, validar comparador, y solo después ampliar.
 
 ## Estado
 
