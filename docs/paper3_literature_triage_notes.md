@@ -32,6 +32,7 @@ No autoriza todavía la creación de YAML B ni la transcripción de valores num�
 | Capano et al. 2023 | GW190521 | B_abs_agnostic_labels / ready_for_yaml_design | Reclasificada tras lectura primaria; ver `paper3_source_B_abs_capano2023_reading.md` |
 | Siegel et al. 2023 / GW190521 | GW190521 | No_tabular / methodological_GW190521 | Útil como `interpretation_check_for_Capano2023`; no YAML sin data release |
 | Isi & Farr 2021 / arXiv:2107.05609 | metodología / simulaciones | No_tabular / methodological_framework | No YAML; útil para metodología de ringdown |
+| Cotesta et al. 2022 / GW150914 | GW150914 | No_tabular / methodological_GW150914 | No YAML; útil como `overtone_robustness_check` |
 | Giesler et al. 2019 | NR / GW150914-like | No_tabular | Discusión sobre sobretonos y tiempo de inicio |
 | Finch & Moore 2022 | GW150914 | No_tabular provisional | Discusión de estabilidad/sensibilidad |
 
