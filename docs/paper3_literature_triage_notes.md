@@ -27,6 +27,7 @@ No autoriza todavía la creación de YAML B ni la transcripción de valores num�
 | Candidato | Evento(s) | Clasificación provisional | Uso inicial |
 |---|---|---|---|
 | LVK/TGR GWTC-2/3 | 19 eventos baseline A | B_param | No empezar aquí; requiere decisión de transformación |
+| Abbott et al. PRD 103, 122002 (2021) / Table IX | muchos eventos solapados con baseline A | A_prime_internal_LVK_TGR | Alta utilidad para auditar heterogeneidad interna; no fuente B externa |
 | Isi et al. 2019 | GW150914 | B_param_focal_GW150914 / needs_more_provenance | Reclasificada tras lectura primaria; ver `paper3_source_B_abs_isi2019_reading.md` |
 | Capano et al. 2023 | GW190521 | B_abs_agnostic_labels / ready_for_yaml_design | Reclasificada tras lectura primaria; ver `paper3_source_B_abs_capano2023_reading.md` |
 | Giesler et al. 2019 | NR / GW150914-like | No_tabular | Discusión sobre sobretonos y tiempo de inicio |
