@@ -63,3 +63,12 @@ Lectura inmediata, solo a título indicativo y sin calcular residual:
 | tiempo de análisis | (no explícito en baseline A) | tref + 6 ms |
 
 Esta yuxtaposición es indicativa, no un test estadístico. La diferencia aparente en `tau_ms` es justamente el tipo de reporting heterogeneity que Paper 3 quiere caracterizar de forma trazable y con un comparador formal todavía por definir.
+
+## Comparador permanente
+
+- Script: `scripts/paper3/compare_gw190521_a_vs_capano2023.py`.
+- Outputs:
+  - `outputs/paper3/gw190521_a_vs_capano2023_comparison.csv`
+  - `outputs/paper3/gw190521_a_vs_capano2023_comparison.md`
+- Métricas calculadas: diferencias brutas (`delta_f_hz`, `delta_tau_ms`), intervalos A simétricos (`mean ± sigma`) e intervalos B asimétricos preservados (`mean - minus`, `mean + plus`), y banderas booleanas `overlap_f_interval` / `overlap_tau_interval` por intersección de intervalos.
+- **No** se calculan p-values, ni residual sigma combinado, ni se simetrizan los intervalos de B. La Capano range B / 330_candidate queda explícitamente fuera porque baseline A no contiene 330 para GW190521.

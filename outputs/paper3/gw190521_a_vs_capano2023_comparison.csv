@@ -1,0 +1,2 @@
+event_id,a_source_family,a_mode,b_source_family,b_kerr_identification,b_agnostic_range,b_mode_label_original,f_a_hz,sigma_f_a_hz,tau_a_ms,sigma_tau_a_ms,f_b_hz,f_b_hz_minus,f_b_hz_plus,tau_b_ms,tau_b_ms_minus,tau_b_ms_plus,delta_f_hz,delta_tau_ms,A_f_low_hz,A_f_high_hz,A_tau_low_ms,A_tau_high_ms,B_f_low_hz,B_f_high_hz,B_tau_low_ms,B_tau_high_ms,overlap_f_interval,overlap_tau_interval
+GW190521,A,220,capano2023,220_candidate,A,range_A_primary,68.0,4.0,15.8,3.2,63.0,2.0,2.0,26.0,6.0,8.0,-5.0,10.2,64.0,72.0,12.6,19.0,61.0,65.0,20.0,34.0,True,False
