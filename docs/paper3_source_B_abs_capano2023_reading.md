@@ -78,3 +78,11 @@ Tras leer la fuente primaria, decidir:
   - `chi_f = 0.86 +0.06/-0.11`.
   - `A330/A220 = 0.2 +0.2/-0.1`.
 - Estado final: `ready_for_yaml_design`. No se crea YAML todavía: antes hay que diseñar el esquema que preserve `agnostic_range`, etiqueta `mode_label` agnóstica, identificación modal posterior, tiempo de análisis (`analysis_time_offset_ms`) e intervalos asimétricos.
+
+## YAML creado
+
+- Ruta: `data/phase1_data/qnm_events_capano2023.yml`.
+- Contiene únicamente el bloque absoluto agnóstico (range A y range B para GW190521) bajo el esquema documentado en `docs/paper3_capano2023_yaml_schema.md`.
+- **No** contiene `parametric_tests`; `delta_f330` / `delta_tau330` quedan deliberadamente fuera por ahora.
+- Los intervalos se preservan asimétricos (`f_hz_minus`/`f_hz_plus`, `tau_ms_minus`/`tau_ms_plus`); no se han convertido a sigma simétrica.
+- No es una cohorte: es un estudio de caso de un único evento (GW190521) con dos resonancias agnósticas.
