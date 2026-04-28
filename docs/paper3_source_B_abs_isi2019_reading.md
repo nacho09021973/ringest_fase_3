@@ -55,3 +55,14 @@ Tras leer la fuente primaria, decidir:
 - `accept_B_abs`: crear YAML mínimo para Isi/GW150914.
 - `needs_more_provenance`: falta tabla/data release o convención.
 - `reject_tabular`: no sirve como fuente tabular comparable.
+
+## Lectura primaria — decisión
+
+- Resultado: `reject_B_abs_for_now`.
+- Clasificación provisional: `B_param_focal_GW150914`.
+- Motivo: la fuente primaria no proporciona una tabla directa `f_hz/tau_ms` para el modo 220 comparable con baseline A.
+- La información numérica útil identificada es parametrizada: `delta_f1`, `delta_tau1`, masa detector-frame y spin bajo hipótesis Kerr.
+- `delta_f1`/`delta_tau1` corresponde al primer sobretono `n=1`, no al modo fundamental `n=0`.
+- Por tanto, no se debe crear `data/phase1_data/qnm_events_isi2019.yml` con esquema absoluto.
+- Si se usa Isi 2019 más adelante, debe ir a un esquema paramétrico separado, por ejemplo `qnm_events_isi2019_parametric.yml`, y solo tras definir formalmente la comparación en espacio de desviaciones.
+- Estado final: `needs_more_provenance`.
