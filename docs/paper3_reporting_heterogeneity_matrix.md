@@ -267,3 +267,13 @@ Lectura física sobria: el input actual permite una línea base institucional A 
 En la auditoría posterior del CSV, las 19 filas tienen `sigma_M_final_Msun` y `sigma_chi_final` presentes; por tanto el baseline A actual es usable para propagación completa de incertidumbre Kerr dentro de esta fuente.
 
 Esto no implica heterogeneidad A/B/C/D/E: sigue habiendo una sola familia de fuente QNM en el YAML actual.
+
+## Decisión de almacenamiento por fuente
+
+- Paper 3 usará un YAML por familia/fuente QNM.
+- Baseline A queda en `data/phase1_data/qnm_events_literature.yml`.
+- La fuente B candidata será pyRing, en un futuro `data/phase1_data/qnm_events_pyring.yml`.
+- No se debe mezclar pyRing dentro del YAML de baseline A.
+- Esta separación preserva provenance, permite comparar fuente contra fuente y evita convertir la matriz A/B/C/D/E en una tabla ambigua.
+- El fichero pyRing todavía no debe crearse con datos hasta tener identificada la tabla/paper exacto y sus convenciones.
+- La afirmación de solape real A/B se considera pendiente hasta tabular event_id concretos desde la fuente B.
