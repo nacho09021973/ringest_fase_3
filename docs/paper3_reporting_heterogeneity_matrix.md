@@ -63,6 +63,16 @@ Columnas mínimas:
 
 ---
 
+## Nota A_double_prime LVK/O4a Remnants
+
+GWTC-4.0 Remnants (`arXiv:2603.19021`) queda confirmado como fuente tabular LVK posterior al baseline A.
+
+Clasificación: `A_double_prime_LVK_O4a_remnants / B_param_with_reconstructed_abs`.
+
+Siguiente evento recomendado: `GW190910_112807`, no `GW190519_153544`, porque la lectura primaria apunta a mayor heterogeneidad en `tau220` con frecuencia `f220` relativamente estable.
+
+---
+
 ## Criterio de inclusión
 
 Una fuente entra en la comparación principal solo si reporta:
