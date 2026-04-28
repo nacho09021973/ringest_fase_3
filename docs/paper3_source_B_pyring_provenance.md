@@ -6,7 +6,14 @@ Fuente B candidata para auditar reporting heterogeneity frente al baseline A LVK
 
 ## Fuente candidata principal
 
-Carullo et al., Phys. Rev. D 103, 124043 (2021), asociado al uso de pyRing / parametrized ringdown analyses.
+Fuente B candidata: pyRing-related Carullo literature. La fuente tabular exacta queda pendiente de identificación.
+
+Referencias relevantes, separadas para evitar confusión bibliográfica:
+
+- Carullo et al., *Phys. Rev. D* **98**, 104020 (2018) — *Empirical tests of the black hole no-hair conjecture using gravitational-wave observations*; referencia del test de no-hair / parametrized ringdown.
+- G. Carullo, *Phys. Rev. D* **103**, 124043 (2021) — *parametrized ringdown spin expansion coefficients formalism*; trabajo distinto al anterior.
+
+Aún no está confirmado que ninguna de las dos referencias contenga una tabla directamente convertible a `f_hz` / `tau_ms` por evento y modo. Eso es exactamente lo que debe resolverse antes de crear el YAML de fuente B.
 
 ## Estado
 
