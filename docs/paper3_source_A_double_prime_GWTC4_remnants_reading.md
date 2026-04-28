@@ -112,6 +112,14 @@ Antes de crear YAML o comparador, diseñar esquema para `A_double_prime` que pre
 - intervalos asimétricos;
 - procedencia Table 3.
 
+## YAML mínimo creado
+
+- Ruta: `data/phase1_data/qnm_events_gwtc4_remnants_table3.yml`.
+- Contiene solo `GW190910_112807`.
+- Preserva `delta_f220`/`delta_tau220`, `f220`/`tau220` reconstruidos, valores IMR-GR entre paréntesis e intervalos asimétricos.
+- No incluye todos los eventos de Table 3.
+- No calcula residual contra baseline A.
+
 ## Estado
 
 `ready_for_A_double_prime_schema_design`
