@@ -69,3 +69,26 @@ Leer la fuente exacta y decidir si pyRing proporciona observables absolutos dire
 ## Decisión pendiente antes de YAML B
 
 La siguiente decisión científica es si la matriz A/B/C/D/E comparará fuentes en espacio de observables físicos absolutos (`f_hz`, `tau_ms`) o en espacio de desviaciones parametrizadas (`delta_f`, `delta_tau`). No se debe crear el YAML B hasta cerrar esta decisión para pyRing.
+
+## Próxima lectura obligatoria
+
+Antes de crear `data/phase1_data/qnm_events_pyring.yml`, hay que leer la tabla exacta de la fuente pyRing-related candidata.
+
+Prioridad de lectura:
+
+1. G. Carullo, *Phys. Rev. D* **103**, 124043 (2021), especialmente Table II si contiene los eventos incluidos en el análisis de desviaciones de frecuencia y damping time.
+2. Carullo et al., *Phys. Rev. D* **98**, 104020 (2018), si contiene observables o parametrizaciones comparables.
+3. Documentación/publicaciones pyRing solo como soporte metodológico, no como fuente tabular de valores QNM.
+
+La lectura debe responder:
+
+- ¿La tabla contiene valores absolutos de frecuencia y damping time?
+- ¿O contiene desviaciones fraccionales respecto a Kerr?
+- ¿Qué eventos aparecen?
+- ¿Qué modos aparecen?
+- ¿Qué incertidumbres aparecen?
+- ¿Las incertidumbres son simétricas o intervalos creíbles?
+- ¿La tabla permite construir `qnm_events_pyring.yml` con el mismo esquema que baseline A?
+- Si no permite el mismo esquema, ¿hace falta un esquema B_param separado?
+
+Hasta completar esta lectura, fuente B queda en estado `candidate_methodological`, no `candidate_tabular`.
