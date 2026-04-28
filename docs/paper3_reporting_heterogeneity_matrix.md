@@ -277,3 +277,18 @@ Esto no implica heterogeneidad A/B/C/D/E: sigue habiendo una sola familia de fue
 - Esta separación preserva provenance, permite comparar fuente contra fuente y evita convertir la matriz A/B/C/D/E en una tabla ambigua.
 - El fichero pyRing todavía no debe crearse con datos hasta tener identificada la tabla/paper exacto y sus convenciones.
 - La afirmación de solape real A/B se considera pendiente hasta tabular event_id concretos desde la fuente B.
+
+## Fuente B candidata: pyRing
+
+- Fuente B propuesta: pyRing / Carullo et al., Phys. Rev. D 103, 124043 (2021), *Empirical tests of the black hole no-hair conjecture using gravitational-wave observations*.
+- Rol: primera fuente independiente frente al baseline A LVK/TGR GWTC-2.
+- Motivo: pyRing es metodológicamente distinto al baseline A y está orientado a análisis bayesiano de ringdown post-merger; maximiza la señal esperable de reporting heterogeneity respecto a un test IMR-consistency institucional.
+- Antes de crear `data/phase1_data/qnm_events_pyring.yml`, hay que localizar la tabla exacta del paper y verificar:
+  - lista de eventos;
+  - modos reportados;
+  - si reporta `f`, `tau` o desviaciones fraccionales (`delta f / f`, `delta tau / tau`);
+  - si las incertidumbres son simétricas o intervalos creíbles (e.g. mediana + 90% CI asimétrico);
+  - marco de masas/frecuencias: source frame vs detector frame;
+  - convención de damping: `tau`, `gamma`, `omega_I` o `Q`.
+- No se transcribirá ningún valor hasta resolver esas convenciones.
+- El solape A/B se considera desconocido hasta construir una tabla de `event_id` desde la fuente pyRing.
