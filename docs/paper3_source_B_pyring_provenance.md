@@ -54,3 +54,18 @@ pyRing entra como fuente B principal solo si puede producirse una tabla trazable
 ## Decisión pendiente
 
 Leer la fuente exacta y decidir si pyRing proporciona observables absolutos directamente comparables con baseline A o si solo permite una comparación en espacio de desviaciones parametrizadas.
+
+## Hipótesis actual sobre comparabilidad
+
+- pyRing es válido como fuente metodológica candidata para Paper 3.
+- La vía más probable de entrada no es una tabla directa `f_hz/tau_ms`, sino reporting parametrizado en desviaciones de frecuencia y damping time (`delta_f`, `delta_tau`).
+- Antes de crear `data/phase1_data/qnm_events_pyring.yml`, hay que decidir si Paper 3 comparará:
+  1. observables absolutos `f_hz/tau_ms`; o
+  2. desviaciones fraccionales respecto a Kerr; o
+  3. ambas, si la fuente permite transformar unas en otras con provenance.
+- PRD 103, 124043 (2021) debe tratarse como candidato de eventos/desviaciones, no como fuente tabular absoluta hasta leer la tabla exacta (presumiblemente Table II, pendiente de verificar).
+- Si pyRing solo reporta desviaciones parametrizadas, el YAML B no debe forzarse al esquema de baseline A sin una transformación explícita y documentada.
+
+## Decisión pendiente antes de YAML B
+
+La siguiente decisión científica es si la matriz A/B/C/D/E comparará fuentes en espacio de observables físicos absolutos (`f_hz`, `tau_ms`) o en espacio de desviaciones parametrizadas (`delta_f`, `delta_tau`). No se debe crear el YAML B hasta cerrar esta decisión para pyRing.
