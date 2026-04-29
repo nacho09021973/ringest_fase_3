@@ -27,10 +27,10 @@ Fase 3 documenta dos casos trazables donde `f_hz` solapa entre fuentes, pero `ta
 
 ## Interpretación permitida
 
-- `tau_ms` parece más frágil que `f_hz` frente a diferencias de reporting en los casos auditados.
+- En los dos casos auditados, `tau_ms` resulta más frágil que `f_hz` frente a diferencias de reporting.
 - Una discrepancia aislada en `tau_ms` puede ser reporting heterogeneity.
 - El resultado justifica separar heterogeneidad documental/metodológica de tensión física.
-- Paper 4 debe partir de esta cautela si busca candidatos discovery.
+- Paper 4 debe partir de esta cautela al comparar observables publicados frente a predicciones Kerr.
 
 ## Qué no afirma este repositorio
 
@@ -65,7 +65,7 @@ Fuentes de entrada, si existen:
 
 ## Relación con Fase 4
 
-Fase 4 debe empezar como filtro de discovery condicionado por Fase 3.
+Fase 4 debe empezar como auditoría metodológica condicionada por Fase 3.
 
 La pregunta natural de Fase 4 es:
 
